@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import NavbarElements from "../Elements/Navbar Elements";
 
 const Navbar = (props) => {

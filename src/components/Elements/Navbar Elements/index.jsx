@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Logo from "./Logo";
 import Profile from "./Profile";
 

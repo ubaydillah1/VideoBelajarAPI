@@ -1,16 +1,13 @@
 import Card from "../components/Elements/Card";
-import HeroBanner from "../components/Elements/Hero Banner";
+import HeroBanner from "../components/Elements/Banner";
 import TabsCategory from "../components/Elements/Tabs Category";
-import Footer from "../components/Fragments/Footer";
-import Navbar from "../components/Fragments/Navbar";
+import ContentLayouts from "../components/Layouts/ContentLayouts";
 
 const HomePage = () => {
   return (
-    <div>
-      <Navbar type="profileNav" />
-
-      <div className="sm:px-[24px]">
-        <div className="sm:max-w-[1200px] mx-auto sm:pt-[120px] pt-[99px] px-[24px] sm:px-[0]">
+    <ContentLayouts typeNav="profileNav">
+      <div>
+        <div className="sm:max-w-[1200px] mx-auto sm:pt-[120px] pt-[99px] ">
           <HeroBanner type="topHeroBanner" />
 
           <section className="card-section mt-5">
@@ -27,133 +24,8 @@ const HomePage = () => {
               <TabsCategory />
             </div>
 
-            <div className="card-wrapper mt-10 flex flex-wrap gap-5 sm:gap-[24px] justify-center">
-              <Card
-                type="cardProduct"
-                title="Big 4 Auditor Financial Analyst"
-                name="Jenna Ortega"
-                srcProfile="img/avatar-card-1.png"
-                src="img/image-card-1.jpeg"
-                jobPosition="Senior Accountant"
-                price="300K"
-                workplace="Gojek"
-              >
-                Mulai transformasi dengan instruktur profesional, harga yang
-                terjangkau, dan kurikulum terbaik dan Juga dengan Kemurahan
-                Harga
-              </Card>
-              <Card
-                type="cardProduct"
-                title="Big 4 Auditor Financial Analyst"
-                name="Jenna Ortega"
-                srcProfile="img/avatar-card-1.png"
-                src="img/image-card-1.jpeg"
-                jobPosition="Senior Accountant"
-                price="300K"
-                workplace="Gojek"
-              >
-                Mulai transformasi dengan instruktur profesional, harga yang
-                terjangkau, dan kurikulum terbaik dan Juga dengan Kemurahan
-                Harga
-              </Card>
-              <Card
-                type="cardProduct"
-                title="Big 4 Auditor Financial Analyst"
-                name="Jenna Ortega"
-                srcProfile="img/avatar-card-1.png"
-                src="img/image-card-1.jpeg"
-                jobPosition="Senior Accountant"
-                price="300K"
-                workplace="Gojek"
-              >
-                Mulai transformasi dengan instruktur profesional, harga yang
-                terjangkau, dan kurikulum terbaik dan Juga dengan Kemurahan
-                Harga
-              </Card>
-              <Card
-                type="cardProduct"
-                title="Big 4 Auditor Financial Analyst"
-                name="Jenna Ortega"
-                srcProfile="img/avatar-card-1.png"
-                src="img/image-card-1.jpeg"
-                jobPosition="Senior Accountant"
-                price="300K"
-                workplace="Gojek"
-              >
-                Mulai transformasi dengan instruktur profesional, harga yang
-                terjangkau, dan kurikulum terbaik dan Juga dengan Kemurahan
-                Harga
-              </Card>
-              <Card
-                type="cardProduct"
-                title="Big 4 Auditor Financial Analyst"
-                name="Jenna Ortega"
-                srcProfile="img/avatar-card-1.png"
-                src="img/image-card-1.jpeg"
-                jobPosition="Senior Accountant"
-                price="300K"
-                workplace="Gojek"
-              >
-                Mulai transformasi dengan instruktur profesional, harga yang
-                terjangkau, dan kurikulum terbaik dan Juga dengan Kemurahan
-                Harga
-              </Card>
-              <Card
-                type="cardProduct"
-                title="Big 4 Auditor Financial Analyst"
-                name="Jenna Ortega"
-                srcProfile="img/avatar-card-1.png"
-                src="img/image-card-1.jpeg"
-                jobPosition="Senior Accountant"
-                price="300K"
-                workplace="Gojek"
-              >
-                Mulai transformasi dengan instruktur profesional, harga yang
-                terjangkau, dan kurikulum terbaik dan Juga dengan Kemurahan
-                Harga
-              </Card>
-              <Card
-                type="cardProduct"
-                title="Big 4 Auditor Financial Analyst"
-                name="Jenna Ortega"
-                srcProfile="img/avatar-card-1.png"
-                src="img/image-card-1.jpeg"
-                jobPosition="Senior Accountant"
-                price="300K"
-                workplace="Gojek"
-              >
-                Mulai transformasi dengan instruktur profesional, harga yang
-                terjangkau, dan kurikulum terbaik dan Juga dengan Kemurahan
-                Harga
-              </Card>
-              <Card
-                type="cardProduct"
-                title="Big 4 Auditor Financial Analyst"
-                name="Jenna Ortega"
-                srcProfile="img/avatar-card-1.png"
-                src="img/image-card-1.jpeg"
-                jobPosition="Senior Accountant"
-                price="300K"
-                workplace="Gojek"
-              >
-                Mulai transformasi dengan instruktur profesional, harga yang
-                terjangkau, dan kurikulum terbaik dan Juga dengan Kemurahan
-                Harga
-              </Card>
-              <Card
-                type="cardProduct"
-                title="Big 4 Auditor Financial Analyst"
-                name="Jenna Ortega"
-                srcProfile="img/avatar-card-1.png"
-                src="img/image-card-1.jpeg"
-                jobPosition="Senior Accountant"
-                price="300K"
-                workplace="Gojek"
-              >
-                Mulai transformasi dengan instruktur profesional, harga yang
-                terjangkau, dan kurikulum terbaik dan Juga dengan Kemurahan
-                Harga
-              </Card>
+            <div className="card-wrapper mt-10 flex flex-wrap gap-5 sm:gap-[20px] justify-center">
+              <Cards />
             </div>
           </section>
 
@@ -162,9 +34,131 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+    </ContentLayouts>
+  );
+};
 
-      <Footer />
-    </div>
+const Cards = () => {
+  return (
+    <>
+      <Card
+        type="cardProduct"
+        title="Big 4 Auditor Financial Analyst"
+        name="Jenna Ortega"
+        srcProfile="img/avatar-card-1.png"
+        src="img/image-card-1.jpeg"
+        jobPosition="Senior Accountant"
+        price="300K"
+        workplace="Gojek"
+      >
+        Mulai transformasi dengan instruktur profesional, harga yang terjangkau,
+        dan kurikulum terbaik dan Juga dengan Kemurahan Harga
+      </Card>
+      <Card
+        type="cardProduct"
+        title="Big 4 Auditor Financial Analyst"
+        name="Jenna Ortega"
+        srcProfile="img/avatar-card-1.png"
+        src="img/image-card-1.jpeg"
+        jobPosition="Senior Accountant"
+        price="300K"
+        workplace="Gojek"
+      >
+        Mulai transformasi dengan instruktur profesional, harga yang terjangkau,
+        dan kurikulum terbaik dan Juga dengan Kemurahan Harga
+      </Card>
+      <Card
+        type="cardProduct"
+        title="Big 4 Auditor Financial Analyst"
+        name="Jenna Ortega"
+        srcProfile="img/avatar-card-1.png"
+        src="img/image-card-1.jpeg"
+        jobPosition="Senior Accountant"
+        price="300K"
+        workplace="Gojek"
+      >
+        Mulai transformasi dengan instruktur profesional, harga yang terjangkau,
+        dan kurikulum terbaik dan Juga dengan Kemurahan Harga
+      </Card>
+      <Card
+        type="cardProduct"
+        title="Big 4 Auditor Financial Analyst"
+        name="Jenna Ortega"
+        srcProfile="img/avatar-card-1.png"
+        src="img/image-card-1.jpeg"
+        jobPosition="Senior Accountant"
+        price="300K"
+        workplace="Gojek"
+      >
+        Mulai transformasi dengan instruktur profesional, harga yang terjangkau,
+        dan kurikulum terbaik dan Juga dengan Kemurahan Harga
+      </Card>
+      <Card
+        type="cardProduct"
+        title="Big 4 Auditor Financial Analyst"
+        name="Jenna Ortega"
+        srcProfile="img/avatar-card-1.png"
+        src="img/image-card-1.jpeg"
+        jobPosition="Senior Accountant"
+        price="300K"
+        workplace="Gojek"
+      >
+        Mulai transformasi dengan instruktur profesional, harga yang terjangkau,
+        dan kurikulum terbaik dan Juga dengan Kemurahan Harga
+      </Card>
+      <Card
+        type="cardProduct"
+        title="Big 4 Auditor Financial Analyst"
+        name="Jenna Ortega"
+        srcProfile="img/avatar-card-1.png"
+        src="img/image-card-1.jpeg"
+        jobPosition="Senior Accountant"
+        price="300K"
+        workplace="Gojek"
+      >
+        Mulai transformasi dengan instruktur profesional, harga yang terjangkau,
+        dan kurikulum terbaik dan Juga dengan Kemurahan Harga
+      </Card>
+      <Card
+        type="cardProduct"
+        title="Big 4 Auditor Financial Analyst"
+        name="Jenna Ortega"
+        srcProfile="img/avatar-card-1.png"
+        src="img/image-card-1.jpeg"
+        jobPosition="Senior Accountant"
+        price="300K"
+        workplace="Gojek"
+      >
+        Mulai transformasi dengan instruktur profesional, harga yang terjangkau,
+        dan kurikulum terbaik dan Juga dengan Kemurahan Harga
+      </Card>
+      <Card
+        type="cardProduct"
+        title="Big 4 Auditor Financial Analyst"
+        name="Jenna Ortega"
+        srcProfile="img/avatar-card-1.png"
+        src="img/image-card-1.jpeg"
+        jobPosition="Senior Accountant"
+        price="300K"
+        workplace="Gojek"
+      >
+        Mulai transformasi dengan instruktur profesional, harga yang terjangkau,
+        dan kurikulum terbaik dan Juga dengan Kemurahan Harga
+      </Card>
+      <Card
+        type="cardProduct"
+        title="Big 4 Auditor Financial Analyst"
+        name="Jenna Ortega"
+        srcProfile="img/avatar-card-1.png"
+        src="img/image-card-1.jpeg"
+        jobPosition="Senior Accountant"
+        price="300K"
+        workplace="Gojek"
+      >
+        Mulai transformasi dengan instruktur profesional, harga yang terjangkau,
+        dan kurikulum terbaik dan Juga dengan Kemurahan Harga
+      </Card>
+    </>
   );
 };
 

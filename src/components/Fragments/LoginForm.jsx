@@ -19,7 +19,7 @@ const LoginForm = () => {
       </InputForm>
 
       <Link
-        className="text-end cursor-pointer text-text-dark-secondary hover:opacity-70 block"
+        className="text-end cursor-pointer text-text-dark-secondary hover:opacity-70 block text-[14px] md:text-[16px]"
         to={"/"}
       >
         Lupa Password?

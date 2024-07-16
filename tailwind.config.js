@@ -28,6 +28,7 @@ export default {
         "tertiary-200": "rgba(254, 202, 165, 1)",
         "tertiary-100": "rgba(254, 232, 210, 0.8)",
         "text-dark": "rgba(34, 35, 37, 1)",
+        "text-dark-primary": "rgba(34, 35, 37, 1)",
         "text-dark-secondary": "rgba(51, 51, 51, 0.68)",
         "text-dark-disabled": "rgba(58, 53, 65, 0.38)",
         "text-light-secondary": "rgba(193, 194, 196, 1)",

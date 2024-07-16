@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import Button from "../Button";
+import Stars from "../Card/Stars";
 
-const HeroBanner = (props) => {
-  const { type } = props;
+const Banner = (props) => {
+  const { type, img } = props;
   return (
     <div>
       {type === "topHeroBanner" && (
@@ -10,10 +11,10 @@ const HeroBanner = (props) => {
           <div className="bg-hero-image-top bg-cover md:h-[400px] relative flex flex-col items-center justify-center rounded-[10px] overflow-hidden">
             <div className="w-full h-full bg-black opacity-80 absolute"></div>
             <div className="relative z-10 px-4 text-center text-white sm:max-w-[920px] py-[20px] h-full sm:h-auto ">
-              <h1 className="text-2xl font-bold mb-4 text-[24px] sm:text-[48px] sm:leading-[52px] leading-[26.4px] font-Poppins">
+              <h2 className="text-2xl font-bold mb-4 text-[24px] sm:text-[48px] sm:leading-[52px] leading-[26.4px] font-Poppins">
                 Revolusi Pembelajaran: Temukan Ilmu Baru melalui Platform Video
                 Interaktif!
-              </h1>
+              </h2>
               <p className="mb-4 text-[14px] sm:text-[16px]">
                 Temukan ilmu baru yang menarik dan mendalam melalui koleksi
                 video pembelajaran berkualitas tinggi. Tidak hanya itu, Anda
@@ -36,9 +37,9 @@ const HeroBanner = (props) => {
               <p className="text-text-light-secondary sm:text-[18px]">
                 NEWSLETTER
               </p>
-              <h1 className="text-2xl font-semibold mb-4 text-[24px] sm:text-[32px] sm:leading-[52px] leading-[26.4px] font-Poppins mt-2 ">
+              <h2 className="text-2xl font-semibold mb-4 text-[24px] sm:text-[32px] sm:leading-[52px] leading-[26.4px] font-Poppins mt-2 ">
                 Mau Belajar Lebih Banyak?
-              </h1>
+              </h2>
               <p className="mb-4 text-[14px] sm:text-[16px] text-bg-base sm:max-w-[525px]">
                 Daftarkan dirimu untuk mendapatkan informasi terbaru dan
                 penawaran spesial dari program-program terbaik hariesok.id
@@ -57,8 +58,29 @@ const HeroBanner = (props) => {
           </div>
         </>
       )}
+
+      {type === "detailBanner" && (
+        <>
+          <div className="bg-hero-image-top bg-cover md:h-[400px] relative rounded-[10px] overflow-hidden flex items-center">
+            <div className="w-full h-full bg-black opacity-80 absolute"></div>
+            <div className="relative z-10 px-4 text-white flex flex-col gap-2 sm:px-[120px] sm:my-0 my-6">
+              <h2 className="text-2xl font-bold text-[24px] sm:text-[40px] sm:leading-[52px] leading-[26.4px] font-Poppins">
+                Gapai Karier Impianmu sebagai Seorang UI/UX Designer & Product
+                Manager.
+              </h2>
+              <p className="text-[14px] sm:text-[16px]">
+                Belajar bersama tutor profesional di Video Course.
+                <div>Kapanpun, di manapun.</div>
+              </p>
+              <div className="relative mt-3">
+                <Stars img={img} />
+              </div>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };
 
-export default HeroBanner;
+export default Banner;

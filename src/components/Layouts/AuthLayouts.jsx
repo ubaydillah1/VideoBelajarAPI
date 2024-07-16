@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Navbar from "../Fragments/Navbar";
 import LoginForm from "../Fragments/LoginForm";
 import RegisterForm from "../Fragments/RegisterForm";

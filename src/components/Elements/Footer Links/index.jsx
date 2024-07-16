@@ -4,7 +4,7 @@ import Links from "./Links";
 const FooterLinks = (props) => {
   const { type } = props;
   return (
-    <div className="hidden md:block">
+    <div className=" md:block">
       <ul className="flex flex-col mt-2 gap-1">
         {type === "kategori" && (
           <>

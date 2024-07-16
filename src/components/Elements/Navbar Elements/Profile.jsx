@@ -17,7 +17,7 @@ const Profile = () => {
           src="img/Avatar.png"
           alt="avatar"
           onClick={handleNavProfile}
-          className="hidden md:block"
+          className="hidden md:block cursor-pointer"
         />
 
         <div
@@ -50,7 +50,7 @@ const Profile = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-between md:hidden h-full">
+      <div className="flex flex-col justify-between md:hidden h-full cursor-pointer">
         <img
           src="/svg/Hamburger.svg"
           alt="hamburger button"

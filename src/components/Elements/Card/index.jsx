@@ -1,4 +1,7 @@
-const Card = (props) => {
+import Stars from "./Stars";
+
+/* eslint-disable react/prop-types */
+const CardProduct = (props) => {
   const {
     type,
     children,
@@ -12,79 +15,8 @@ const Card = (props) => {
   } = props;
   return (
     type && (
-      <div className="border border-[#3A35411F] rounded-[10px] overflow-hidden flex gap-2 p-[16px] relative sm:block max-w-[384px] sm:p-[20px] cursor-pointer">
-        <div>
-          <img
-            src={src}
-            alt="image card"
-            className="rounded-[10px] h-[82px] min-w-[82px] object-cover sm:w-full sm:h-[193px]"
-          />
-          <div className="star-wrapper flex gap-0.5 mt-2 absolute sm:bottom-5 bottom-4">
-            <svg
-              width="16"
-              height="15"
-              viewBox="0 0 16 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8 11.9525L12.635 14.75L11.405 9.4775L15.5 5.93L10.1075 5.4725L8 0.5L5.8925 5.4725L0.5 5.93L4.595 9.4775L3.365 14.75L8 11.9525Z"
-                fill="#FCE91B"
-              />
-            </svg>
-            <svg
-              width="16"
-              height="15"
-              viewBox="0 0 16 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8 11.9525L12.635 14.75L11.405 9.4775L15.5 5.93L10.1075 5.4725L8 0.5L5.8925 5.4725L0.5 5.93L4.595 9.4775L3.365 14.75L8 11.9525Z"
-                fill="#FCE91B"
-              />
-            </svg>
-            <svg
-              width="16"
-              height="15"
-              viewBox="0 0 16 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8 11.9525L12.635 14.75L11.405 9.4775L15.5 5.93L10.1075 5.4725L8 0.5L5.8925 5.4725L0.5 5.93L4.595 9.4775L3.365 14.75L8 11.9525Z"
-                fill="#FCE91B"
-              />
-            </svg>
-            <svg
-              width="16"
-              height="15"
-              viewBox="0 0 16 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8 11.9525L12.635 14.75L11.405 9.4775L15.5 5.93L10.1075 5.4725L8 0.5L5.8925 5.4725L0.5 5.93L4.595 9.4775L3.365 14.75L8 11.9525Z"
-                fill="#FCE91B"
-              />
-            </svg>
-            <svg
-              width="16"
-              height="15"
-              viewBox="0 0 16 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8 11.9525L12.635 14.75L11.405 9.4775L15.5 5.93L10.1075 5.4725L8 0.5L5.8925 5.4725L0.5 5.93L4.595 9.4775L3.365 14.75L8 11.9525Z"
-                fill="#FCE91B"
-              />
-            </svg>
-            <p className="absolute -right-[50px] text-[12px] text-text-dark-secondary underline">
-              3.5 (86)
-            </p>
-          </div>
-        </div>
+      <div className="border border-[#3A35411F] rounded-[10px] overflow-hidden flex gap-2 p-[16px] relative sm:block max-w-[384px] sm:p-[20px] cursor-pointer  bg-white md:mx-0 mx-auto">
+        <Stars src={src} />
         <div className="flex flex-col justify-between sm:mt-3 gap-1">
           <h3 className="text-text-dark font-bold leading-[19.6px] text-[16px] font-Poppins sm:text-[18px] sm:mb-2">
             {title}
@@ -123,4 +55,4 @@ const Card = (props) => {
   );
 };
 
-export default Card;
+export default CardProduct;

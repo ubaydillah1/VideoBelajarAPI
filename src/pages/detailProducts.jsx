@@ -18,7 +18,7 @@ const DetailProductPage = () => {
   ];
   return (
     <ContentLayouts typeNav="profileNav">
-      <div className="mt-20 sm:max-w-[1200px] mx-auto md:mt-32">
+      <div className="mt-20 sm:max-w-[1200px] mx-auto md:mt-32 mb-10 md:mb-0">
         <Breadcrumbs items={breadcrumbItems} />
 
         <div className="mt-5">
@@ -59,16 +59,40 @@ const DetailProductPage = () => {
                   classNameArrow="right-0 top-[8px] md:top-[10.5px] absolute w-[12px] md:w-[16px] h-[12px] md:w-[16px]"
                 >
                   <Dropdown.Point title="The basics of user experience design">
-                    <Dropdown.Icon src="svg/Media.svg" text="Media" />
-                    <Dropdown.Icon src="svg/Calender.svg" text="12 Menit" />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Media.svg"
+                      text="Media"
+                    />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Calender.svg"
+                      text="12 Menit"
+                    />
                   </Dropdown.Point>
                   <Dropdown.Point title="Jobs in the field of user experience">
-                    <Dropdown.Icon src="svg/Media.svg" text="Media" />
-                    <Dropdown.Icon src="svg/Calender.svg" text="12 Menit" />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Media.svg"
+                      text="Media"
+                    />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Calender.svg"
+                      text="12 Menit"
+                    />
                   </Dropdown.Point>
                   <Dropdown.Point title="The product development life cycle">
-                    <Dropdown.Icon src="svg/Media.svg" text="Media" />
-                    <Dropdown.Icon src="svg/Calender.svg" text="12 Menit" />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Media.svg"
+                      text="Media"
+                    />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Calender.svg"
+                      text="12 Menit"
+                    />
                   </Dropdown.Point>
                 </Dropdown>
 
@@ -79,16 +103,40 @@ const DetailProductPage = () => {
                   classNameArrow="right-0 top-[8px] md:top-[10.5px] absolute w-[12px] md:w-[16px] h-[12px] md:w-[16px]"
                 >
                   <Dropdown.Point title="The basics of user experience design">
-                    <Dropdown.Icon src="svg/Media.svg" text="Media" />
-                    <Dropdown.Icon src="svg/Calender.svg" text="12 Menit" />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Media.svg"
+                      text="Media"
+                    />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Calender.svg"
+                      text="12 Menit"
+                    />
                   </Dropdown.Point>
                   <Dropdown.Point title="Jobs in the field of user experience">
-                    <Dropdown.Icon src="svg/Media.svg" text="Media" />
-                    <Dropdown.Icon src="svg/Calender.svg" text="12 Menit" />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Media.svg"
+                      text="Media"
+                    />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Calender.svg"
+                      text="12 Menit"
+                    />
                   </Dropdown.Point>
                   <Dropdown.Point title="The product development life cycle">
-                    <Dropdown.Icon src="svg/Media.svg" text="Media" />
-                    <Dropdown.Icon src="svg/Calender.svg" text="12 Menit" />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Media.svg"
+                      text="Media"
+                    />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Calender.svg"
+                      text="12 Menit"
+                    />
                   </Dropdown.Point>
                 </Dropdown>
 
@@ -99,16 +147,40 @@ const DetailProductPage = () => {
                   classNameArrow="right-0 top-[8px] md:top-[10.5px] absolute w-[12px] md:w-[16px] h-[12px] md:w-[16px]"
                 >
                   <Dropdown.Point title="The basics of user experience design">
-                    <Dropdown.Icon src="svg/Media.svg" text="Media" />
-                    <Dropdown.Icon src="svg/Calender.svg" text="12 Menit" />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Media.svg"
+                      text="Media"
+                    />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Calender.svg"
+                      text="12 Menit"
+                    />
                   </Dropdown.Point>
                   <Dropdown.Point title="Jobs in the field of user experience">
-                    <Dropdown.Icon src="svg/Media.svg" text="Media" />
-                    <Dropdown.Icon src="svg/Calender.svg" text="12 Menit" />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Media.svg"
+                      text="Media"
+                    />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Calender.svg"
+                      text="12 Menit"
+                    />
                   </Dropdown.Point>
                   <Dropdown.Point title="The product development life cycle">
-                    <Dropdown.Icon src="svg/Media.svg" text="Media" />
-                    <Dropdown.Icon src="svg/Calender.svg" text="12 Menit" />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Media.svg"
+                      text="Media"
+                    />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Calender.svg"
+                      text="12 Menit"
+                    />
                   </Dropdown.Point>
                 </Dropdown>
 
@@ -119,16 +191,40 @@ const DetailProductPage = () => {
                   classNameArrow="right-0 top-[8px] md:top-[10.5px] absolute w-[12px] md:w-[16px] h-[12px] md:w-[16px]"
                 >
                   <Dropdown.Point title="The basics of user experience design">
-                    <Dropdown.Icon src="svg/Media.svg" text="Media" />
-                    <Dropdown.Icon src="svg/Calender.svg" text="12 Menit" />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Media.svg"
+                      text="Media"
+                    />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Calender.svg"
+                      text="12 Menit"
+                    />
                   </Dropdown.Point>
                   <Dropdown.Point title="Jobs in the field of user experience">
-                    <Dropdown.Icon src="svg/Media.svg" text="Media" />
-                    <Dropdown.Icon src="svg/Calender.svg" text="12 Menit" />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Media.svg"
+                      text="Media"
+                    />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Calender.svg"
+                      text="12 Menit"
+                    />
                   </Dropdown.Point>
                   <Dropdown.Point title="The product development life cycle">
-                    <Dropdown.Icon src="svg/Media.svg" text="Media" />
-                    <Dropdown.Icon src="svg/Calender.svg" text="12 Menit" />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Media.svg"
+                      text="Media"
+                    />
+                    <Dropdown.Icon
+                      classNameIcon="hidden md:flex"
+                      src="svg/Calender.svg"
+                      text="12 Menit"
+                    />
                   </Dropdown.Point>
                 </Dropdown>
               </DescriptionLayouts>

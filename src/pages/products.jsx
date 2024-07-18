@@ -21,9 +21,9 @@ const ProducstPage = () => {
 
   return (
     <ContentLayouts type="profileNav">
-      <main className="pt-[90px] max-w-[1200px] mx-auto">
+      <main className="md:py-[90px] max-w-[1200px] mx-auto mb-[30px]">
         <div className="md:mt-10">
-          <header className="text-[24px] font-semibold font-Poppins leading-[26.4px] md:text-[]">
+          <header className="text-[24px] font-semibold font-Poppins leading-[26.4px] ">
             Koleksi Video Pembelajaran Unggulan
           </header>
           <p className="text-[14px] text-text-dark-secondary leading-[19.6px] mt-2">
@@ -57,7 +57,9 @@ const ProducstPage = () => {
             <div className="card-container flex flex-col gap-5 md:flex-row md:flex-wrap md:justify-between items-center">
               <Cards />
             </div>
-            <Pagination />
+            <div className="flex justify-center md:block">
+              <Pagination />
+            </div>
           </div>
         </section>
       </main>

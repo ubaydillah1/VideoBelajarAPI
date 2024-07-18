@@ -3,14 +3,14 @@ import Footer from "../Fragments/Footer";
 import Navbar from "../Fragments/Navbar";
 
 const ContentLayouts = (props) => {
-  const { typeNav, children } = props;
+  const { typeNav, children, type, marginTop, typeFooter = true } = props;
   return (
     <div>
       <div className="px-[20px]">
-        <Navbar typeNav={typeNav} />
+        <Navbar typeNav={typeNav} type={type} marginTop={marginTop} />
         {children}
       </div>
-      <Footer />
+      {typeFooter && <Footer />}
     </div>
   );
 };

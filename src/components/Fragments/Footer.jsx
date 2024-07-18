@@ -18,7 +18,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="w-100% flex justify-center mt-10 bg-white py-10 border-t border-[#3A35411F] w-full px-[20px]">
+    <div className="w-100% flex justify-center bg-white py-10 border-t border-[#3A35411F] w-full px-[20px]">
       <div className="md:max-w-[1200px] w-full">
         <div className="flex flex-col gap-4 md:flex-row md:justify-between">
           <div className="address-footer-content">

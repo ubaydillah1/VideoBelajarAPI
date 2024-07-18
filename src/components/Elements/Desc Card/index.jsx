@@ -12,11 +12,13 @@ const DescCard = (props) => {
 };
 
 const DescCardHeader = ({ src }) => {
-  <img
-    src={src}
-    alt=""
-    className="rounded-[10px] w-[318px] h-[180px] object-cover mb-3"
-  />;
+  return (
+    <img
+      src={src}
+      alt="image"
+      className="rounded-[10px] w-[318px] h-[180px] object-cover mb-3"
+    />
+  );
 };
 
 const DescCardBody = (props) => {

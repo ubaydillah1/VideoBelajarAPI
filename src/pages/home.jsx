@@ -7,13 +7,13 @@ const HomePage = () => {
   return (
     <ContentLayouts typeNav="profileNav">
       <div>
-        <div className="sm:max-w-[1200px] mx-auto sm:pt-[120px] pt-[99px] ">
+        <div className="sm:max-w-[1200px] mx-auto md:pt-[120px] md:py-[70px] pb-10">
           <HeroBanner type="topHeroBanner" />
 
           <section className="card-section mt-5">
             <h2 className="font-Poppins text-[23px] font-semibold text-text-dark leading-[26.4px] sm:text-[32px] sm:mt-20">
               Koleksi Video{" "}
-              <span className="block sm:inline">Pembelajaran Unggulan </span>
+              <span className="block sm:inline">Pembelajaran Unggulan</span>
             </h2>
 
             <p className="text-text-dark-secondary leading-[19.6px] my-3 font-medium">
@@ -29,7 +29,7 @@ const HomePage = () => {
             </div>
           </section>
 
-          <div className="mt-16">
+          <div className="md:mt-16 mt-10">
             <HeroBanner type="bottomHeroBanner" />
           </div>
         </div>

@@ -106,7 +106,7 @@ const PaymentMethod = () => {
         <div className="mt-3">
           <div className="flex gap-2">
             <p>1. </p>
-            <p>Masukkan kartu ATM dan PIN BCA Anda</p>
+            <p>Masukkan kartu ATM dan PIN BCA Anda.</p>
           </div>
           <div className="flex gap-2">
             <p>2. </p>

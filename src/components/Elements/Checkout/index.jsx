@@ -16,17 +16,26 @@ const Checkout = (props) => {
         </div>
 
         {cta === "single" && (
-          <Button classname="text-white bg-primary w-full text-[14px] md:text-[16px]">
+          <Button
+            classname="text-white bg-primary w-full text-[14px] md:text-[16px]"
+            link="payment"
+          >
             Beli Sekarang
           </Button>
         )}
 
         {cta === "double" && (
           <div className="flex md:gap-5 flex-col gap-3 md:flex-row my-3">
-            <Button classname="border-2 border-primary w-full text-[14px] md:text-[16px] text-primary hover:bg-primary hover:text-white my-0">
+            <Button
+              classname="border-2 border-primary w-full text-[14px] md:text-[16px] text-primary hover:bg-primary hover:text-white my-0"
+              link="/changeMethod"
+            >
               Ganti Metode Pembayaran
             </Button>
-            <Button classname="text-white bg-primary w-full text-[14px] md:text-[16px] my-0">
+            <Button
+              classname="text-white bg-primary w-full text-[14px] md:text-[16px] my-0"
+              link="/endMethod"
+            >
               Beli Sekarang
             </Button>
           </div>

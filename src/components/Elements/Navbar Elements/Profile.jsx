@@ -12,7 +12,12 @@ const Profile = () => {
   return (
     <div>
       <div className="items-center gap-7 md:flex md:relative">
-        <p className="text-text-dark-secondary hidden md:block">Kategori</p>
+        <LinkProfile
+          classname="text-text-dark-secondary hidden md:block border-none"
+          to="/products"
+        >
+          Kategori
+        </LinkProfile>
         <img
           src="img/Avatar.png"
           alt="avatar"
@@ -26,7 +31,10 @@ const Profile = () => {
           } absolute shadow-2xl left-0 right-0 top-[60px] md:-left-[66px] md:top-[57px]`}
         >
           <div className="flex flex-col shadow-lg md:w-[200px]">
-            <LinkProfile classname={"text-text-dark-secondary md:hidden"}>
+            <LinkProfile
+              classname={"text-text-dark-secondary md:hidden"}
+              to="/products"
+            >
               Kategori
             </LinkProfile>
             <LinkProfile classname={"text-text-dark-secondary"}>

@@ -48,7 +48,10 @@ const DescCardBody = (props) => {
         Penawaran spesial tersisa {timeLeft} hari lagi!
       </p>
 
-      <Button classname="bg-primary text-white text-[14px] w-full h-[34px]">
+      <Button
+        classname="bg-primary text-white text-[14px] w-full h-[34px]"
+        link="/method"
+      >
         Beli Sekarang
       </Button>
     </>

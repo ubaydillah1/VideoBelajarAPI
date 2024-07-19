@@ -83,7 +83,10 @@ const ChangeMethodPage = () => {
                 classNameArrow="right-[29px] top-[22px] absolute w-[12px] md:w-[16px] h-[12px] md:w-[16px] md:right-[26px]"
               ></Dropdown>
 
-              <Button classname="text-white bg-primary w-full text-[14px] md:text-[16px] mt-7 mb-0">
+              <Button
+                classname="text-white bg-primary w-full text-[14px] md:text-[16px] mt-7 mb-0"
+                link="/endMethod"
+              >
                 Beli Sekarang
               </Button>
             </DescriptionLayouts>

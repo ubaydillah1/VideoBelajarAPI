@@ -13,9 +13,17 @@ const CardProduct = (props) => {
     title,
     workplace,
   } = props;
+
+  function handleClick() {
+    window.location.href = "/detail";
+  }
+
   return (
     type && (
-      <div className="border border-[#3A35411F] rounded-[10px] overflow-hidden flex gap-2 p-[16px] relative sm:block max-w-[384px] sm:p-[20px] cursor-pointer  bg-white md:mx-0 mx-auto">
+      <div
+        className="border border-[#3A35411F] rounded-[10px] overflow-hidden flex gap-2 p-[16px] relative sm:block max-w-[384px] sm:p-[20px] cursor-pointer  bg-white md:mx-0 mx-auto"
+        onClick={handleClick}
+      >
         <Stars src={src} />
         <div className="flex flex-col justify-between sm:mt-3 gap-1">
           <h3 className="text-text-dark font-bold leading-[19.6px] text-[16px] font-Poppins sm:text-[18px] sm:mb-2">

@@ -45,7 +45,7 @@ const RegisterForm = () => {
       </Button>
       <Button
         classname="bg-[#E2FCD9CC] text-[#3ECF4C] hover:opacity-70 w-full"
-        link="/"
+        link="/login"
       >
         Masuk
       </Button>

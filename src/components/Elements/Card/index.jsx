@@ -12,6 +12,8 @@ const CardProduct = (props) => {
     jobPosition,
     title,
     workplace,
+    onEdit,
+    onDelete,
   } = props;
 
   function handleClick() {
@@ -21,7 +23,7 @@ const CardProduct = (props) => {
   return (
     type && (
       <div
-        className="border border-[#3A35411F] rounded-[10px] overflow-hidden flex gap-2 p-[16px] relative sm:block max-w-[384px] sm:p-[20px] cursor-pointer  bg-white md:mx-0 mx-auto"
+        className="border border-[#3A35411F] rounded-[10px] overflow-hidden flex gap-2 p-[16px] relative sm:block max-w-[384px] sm:p-[20px] cursor-pointer bg-white md:mx-0 mx-auto"
         onClick={handleClick}
       >
         <Stars src={src} />
@@ -53,6 +55,28 @@ const CardProduct = (props) => {
                 </span>
               </p>
             </div>
+          </div>
+          <div className="flex gap-5 justify-between my-2">
+            <button
+              className="px-[20px] py-[1px] rounded-[10px] text-white font-Poppins font-bold md:mb-4 bg-green-400"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                onEdit();
+              }}
+            >
+              Ubah
+            </button>
+            <button
+              className="px-[20px] py-[1px] rounded-[10px] text-white font-Poppins font-bold md:mb-4 bg-red-500"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                onDelete();
+              }}
+            >
+              Hapus
+            </button>
           </div>
           <p className="text-end leading-3 font-Poppins font-semibold text-primary sm:text-[24px] text-[20px] mt-1.5 sm:mt-0">
             Rp {price}

@@ -8,7 +8,6 @@ import TabsCategory from "../components/Elements/Tabs Category";
 const defaultCards = [
   {
     id: "1",
-    type: "cardProduct",
     title: "Big 4 Auditor Financial Analyst",
     name: "Jenna Ortega",
     srcProfile: "img/avatar-card-1.png",
@@ -21,7 +20,6 @@ const defaultCards = [
   },
   {
     id: "2",
-    type: "cardProduct",
     title: "Data Scientist",
     name: "Emma Watson",
     srcProfile: "img/avatar-card-1.png",
@@ -34,7 +32,6 @@ const defaultCards = [
   },
   {
     id: "3",
-    type: "cardProduct",
     title: "Software Engineer",
     name: "John Doe",
     srcProfile: "img/avatar-card-1.png",
@@ -47,7 +44,6 @@ const defaultCards = [
   },
   {
     id: "4",
-    type: "cardProduct",
     title: "Project Manager",
     name: "Jane Smith",
     srcProfile: "img/avatar-card-1.png",
@@ -60,7 +56,6 @@ const defaultCards = [
   },
   {
     id: "5",
-    type: "cardProduct",
     title: "UI/UX Designer",
     name: "Michael Brown",
     srcProfile: "img/avatar-card-1.png",
@@ -73,7 +68,6 @@ const defaultCards = [
   },
   {
     id: "6",
-    type: "cardProduct",
     title: "Marketing Specialist",
     name: "Laura Wilson",
     srcProfile: "img/avatar-card-1.png",
@@ -86,7 +80,6 @@ const defaultCards = [
   },
   {
     id: "7",
-    type: "cardProduct",
     title: "Cyber Security Analyst",
     name: "Chris Evans",
     srcProfile: "img/avatar-card-1.png",
@@ -99,7 +92,6 @@ const defaultCards = [
   },
   {
     id: "8",
-    type: "cardProduct",
     title: "Product Manager",
     name: "Scarlett Johansson",
     srcProfile: "img/avatar-card-1.png",
@@ -112,7 +104,6 @@ const defaultCards = [
   },
   {
     id: "9",
-    type: "cardProduct",
     title: "DevOps Engineer",
     name: "Robert Downey Jr.",
     srcProfile: "img/avatar-card-1.png",
@@ -194,7 +185,6 @@ const HomePage = () => {
               {cards.map((card) => (
                 <CardProduct
                   key={card.id}
-                  type={card.type}
                   title={card.title}
                   name={card.name}
                   srcProfile={card.srcProfile}

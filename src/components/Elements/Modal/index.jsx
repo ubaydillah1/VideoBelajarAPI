@@ -13,8 +13,7 @@ const Modal = ({ isOpen, onClose, onAddCard, onEditCard, type, card }) => {
   const [description, setDescription] = useState("");
 
   useEffect(() => {
-    console.log("Modal open state:", isOpen);
-    if (type === "edit" && card) {
+    if (isOpen && type === "edit" && card) {
       setTitle(card.title);
       setName(card.name);
       setAvatar(card.avatar);
@@ -23,8 +22,22 @@ const Modal = ({ isOpen, onClose, onAddCard, onEditCard, type, card }) => {
       setPrice(card.price);
       setWorkplace(card.workplace);
       setDescription(card.description);
+    } else if (!isOpen) {
+      // Reset all fields when the modal is closed
+      resetForm();
     }
   }, [type, card, isOpen]);
+
+  const resetForm = () => {
+    setTitle("");
+    setName("");
+    setAvatar("");
+    setImage("");
+    setJobPosition("");
+    setPrice("");
+    setWorkplace("");
+    setDescription("");
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();

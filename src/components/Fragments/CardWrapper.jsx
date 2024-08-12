@@ -1,11 +1,14 @@
 /* eslint-disable react/prop-types */
+import { useState, useEffect } from "react";
 import Card from "../Elements/Card";
-
-const data = localStorage.getItem("cards");
-
-const cards = JSON.parse(data);
+import { getProducts } from "../../services/product.service";
 
 const CardWrapper = () => {
+  const [cards, setCards] = useState([]);
+
+  useEffect(() => {
+    getProducts((data) => setCards(data));
+  }, []);
   return (
     <>
       {cards.map((card) => {
@@ -15,8 +18,8 @@ const CardWrapper = () => {
             type={card.type}
             title={card.title}
             name={card.name}
-            srcProfile={card.srcProfile}
-            src={card.src}
+            avatar={card.avatar}
+            image={card.image}
             jobPosition={card.jobPosition}
             price={card.price}
             workplace={card.workplace}

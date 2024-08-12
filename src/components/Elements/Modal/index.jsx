@@ -1,28 +1,30 @@
 /* eslint-disable react/prop-types */
+// Modal.js
 import { useState, useEffect } from "react";
 
 const Modal = ({ isOpen, onClose, onAddCard, onEditCard, type, card }) => {
   const [title, setTitle] = useState("");
   const [name, setName] = useState("");
-  const [srcProfile, setSrcProfile] = useState("");
-  const [src, setSrc] = useState("");
+  const [avatar, setAvatar] = useState("");
+  const [image, setImage] = useState("");
   const [jobPosition, setJobPosition] = useState("");
   const [price, setPrice] = useState("");
   const [workplace, setWorkplace] = useState("");
   const [description, setDescription] = useState("");
 
   useEffect(() => {
+    console.log("Modal open state:", isOpen);
     if (type === "edit" && card) {
       setTitle(card.title);
       setName(card.name);
-      setSrcProfile(card.srcProfile);
-      setSrc(card.src);
+      setAvatar(card.avatar);
+      setImage(card.image);
       setJobPosition(card.jobPosition);
       setPrice(card.price);
       setWorkplace(card.workplace);
       setDescription(card.description);
     }
-  }, [type, card]);
+  }, [type, card, isOpen]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,8 +33,8 @@ const Modal = ({ isOpen, onClose, onAddCard, onEditCard, type, card }) => {
       type: "cardProduct",
       title,
       name,
-      srcProfile,
-      src,
+      avatar,
+      image,
       jobPosition,
       price,
       workplace,
@@ -81,8 +83,8 @@ const Modal = ({ isOpen, onClose, onAddCard, onEditCard, type, card }) => {
             </label>
             <input
               type="text"
-              value={srcProfile}
-              onChange={(e) => setSrcProfile(e.target.value)}
+              value={avatar}
+              onChange={(e) => setAvatar(e.target.value)}
               className="border border-gray-300 rounded-lg p-3 w-full"
             />
           </div>
@@ -92,8 +94,8 @@ const Modal = ({ isOpen, onClose, onAddCard, onEditCard, type, card }) => {
             </label>
             <input
               type="text"
-              value={src}
-              onChange={(e) => setSrc(e.target.value)}
+              value={image}
+              onChange={(e) => setImage(e.target.value)}
               className="border border-gray-300 rounded-lg p-3 w-full"
             />
           </div>

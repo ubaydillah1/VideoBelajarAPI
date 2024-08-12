@@ -1,15 +1,65 @@
-/* eslint-disable no-unused-vars */
+// HomePage.js
 import { useEffect, useState } from "react";
 import HeroBanner from "../components/Elements/Banner";
 import ContentLayouts from "../components/Layouts/ContentLayouts";
 import CardProduct from "../components/Elements/Card";
 import Modal from "../components/Elements/Modal";
 import TabsCategory from "../components/Elements/Tabs Category";
+import {
+  getProducts,
+  addProduct,
+  updateProduct,
+  deleteProduct,
+} from "../services/product.service";
 
 const HomePage = () => {
   const [cards, setCards] = useState([]);
   const [isModalAddOpen, setIsModalAddOpen] = useState(false);
   const [currentCard, setCurrentCard] = useState(null);
+
+  useEffect(() => {
+    getProducts((data) => {
+      setCards(data);
+    });
+  }, []);
+
+  const handleAddCard = async (newCard) => {
+    try {
+      const data = await new Promise((resolve) => {
+        addProduct(newCard, resolve);
+      });
+      setCards([...cards, data]);
+    } catch (error) {
+      console.error("Error adding card:", error);
+    }
+  };
+
+  const handleEditCard = async (updatedCard) => {
+    try {
+      const data = await new Promise((resolve) => {
+        updateProduct(updatedCard.id, updatedCard, resolve);
+      });
+      setCards(cards.map((card) => (card.id === updatedCard.id ? data : card)));
+    } catch (error) {
+      console.error("Error updating card:", error);
+    }
+  };
+
+  const handleDeleteCard = async (id) => {
+    try {
+      await new Promise((resolve) => {
+        deleteProduct(id, resolve);
+      });
+      setCards(cards.filter((card) => card.id !== id));
+    } catch (error) {
+      console.error("Error deleting card:", error);
+    }
+  };
+
+  const handleEdit = (card) => {
+    setCurrentCard(card);
+    setIsModalAddOpen(true);
+  };
 
   return (
     <ContentLayouts typeNav="profileNav">
@@ -33,7 +83,10 @@ const HomePage = () => {
 
             <button
               className="w-full py-[8px] rounded-[10px] text-white font-Poppins font-bold bg-blue-500 md:mb-7 mt-10 mb-5 md:mt-0"
-              onClick={() => setIsModalAddOpen(true)}
+              onClick={() => {
+                console.log("Opening modal for adding card");
+                setIsModalAddOpen(true);
+              }}
             >
               Tambahkan Card
             </button>
@@ -44,17 +97,13 @@ const HomePage = () => {
                   key={card.id}
                   title={card.title}
                   name={card.name}
-                  srcProfile={card.srcProfile}
-                  src={card.src}
+                  avatar={card.avatar}
+                  image={card.image}
                   jobPosition={card.jobPosition}
                   price={card.price}
                   workplace={card.workplace}
-                  onEdit={() => {
-                    setCurrentCard(card);
-                    setIsModalAddOpen(true);
-                  }}
-                  onDelete="true"
-                  noButton="true"
+                  onEdit={() => handleEdit(card)}
+                  onDelete={() => handleDeleteCard(card.id)}
                 >
                   {card.description}
                 </CardProduct>
@@ -74,8 +123,8 @@ const HomePage = () => {
           setIsModalAddOpen(false);
           setCurrentCard(null);
         }}
-        onAddCard="true"
-        onEditCard="true"
+        onAddCard={handleAddCard}
+        onEditCard={handleEditCard}
         type={currentCard ? "edit" : "add"}
         card={currentCard}
       />

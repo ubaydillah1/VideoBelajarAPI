@@ -5,10 +5,11 @@ const Stars = ({ src, img = true }) => {
       <img
         src={src}
         alt="image card"
-        className={`rounded-[10px] h-[82px] min-w-[82px] object-cover sm:w-full sm:h-[193px] ${
+        className={`rounded-[10px] h-[82px] object-cover sm:w-full sm:h-[193px] ${
           img ? "inline" : "hidden"
         }`}
       />
+
       <div
         className={`star-wrapper flex gap-0.5 ${
           img ? "absolute sm:bottom-5 bottom-4 mt-2" : "block"

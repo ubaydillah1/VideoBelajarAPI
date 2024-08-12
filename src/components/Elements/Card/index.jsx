@@ -4,8 +4,8 @@ import Stars from "./Stars";
 const CardProduct = (props) => {
   const {
     children,
-    src,
-    srcProfile,
+    image,
+    avatar,
     name,
     price,
     jobPosition,
@@ -21,10 +21,10 @@ const CardProduct = (props) => {
 
   return (
     <div
-      className="border border-[#3A35411F] rounded-[10px] overflow-hidden flex gap-2 p-[16px] relative sm:block max-w-[384px] sm:p-[20px] cursor-pointer bg-white md:mx-0 mx-auto"
+      className="border border-[#3A35411F] rounded-[10px] overflow-hidden flex gap-2 p-[16px] relative sm:block max-w-[384px] sm:p-[20px] cursor-pointer bg-white md:mx-0 mx-auto h-full sm:max-w-[384px] sm:w-full"
       onClick={handleClick}
     >
-      <Stars src={src} />
+      <Stars src={image} />
       <div className="flex flex-col justify-between sm:mt-3 gap-1">
         <h3 className="text-text-dark font-bold leading-[19.6px] text-[16px] font-Poppins sm:text-[18px] sm:mb-2">
           {title}
@@ -35,7 +35,7 @@ const CardProduct = (props) => {
         </p>
         <div className="profile-card flex gap-2 sm:my-3 mt-1">
           <img
-            src={srcProfile}
+            src={avatar}
             alt="avatar"
             className="w-[36px] h-[36px] rounded-[10px] sm:w-[40px] sm:h-[40px]"
           />

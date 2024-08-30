@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import Card from "../Elements/Card";
-import { getProducts } from "../../services/product.service";
+import { getProducts } from "../../services/api.service";
 
 const CardWrapper = () => {
   const [cards, setCards] = useState([]);

@@ -1,34 +1,25 @@
 // HomePage.js
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import HeroBanner from "../components/Elements/Banner";
 import ContentLayouts from "../components/Layouts/ContentLayouts";
-import CardProduct from "../components/Elements/Card";
 import Modal from "../components/Elements/Modal";
 import TabsCategory from "../components/Elements/Tabs Category";
+import { useDispatch } from "react-redux";
 import {
-  getProducts,
-  addProduct,
-  updateProduct,
-  deleteProduct,
-} from "../services/product.service";
+  createProduct,
+  modifyProduct,
+  removeProduct,
+} from "../features/productsSlice";
+import ListView from "../views/ListView";
 
 const HomePage = () => {
-  const [cards, setCards] = useState([]);
   const [isModalAddOpen, setIsModalAddOpen] = useState(false);
   const [currentCard, setCurrentCard] = useState(null);
-
-  useEffect(() => {
-    getProducts((data) => {
-      setCards(data);
-    });
-  }, []);
+  const dispatch = useDispatch();
 
   const handleAddCard = async (newCard) => {
     try {
-      const data = await new Promise((resolve) => {
-        addProduct(newCard, resolve);
-      });
-      setCards([...cards, data]);
+      dispatch(createProduct(newCard));
     } catch (error) {
       console.error("Error adding card:", error);
     }
@@ -36,21 +27,17 @@ const HomePage = () => {
 
   const handleEditCard = async (updatedCard) => {
     try {
-      const data = await new Promise((resolve) => {
-        updateProduct(updatedCard.id, updatedCard, resolve);
-      });
-      setCards(cards.map((card) => (card.id === updatedCard.id ? data : card)));
+      dispatch(
+        modifyProduct({ id: updatedCard.id, updatedProduct: updatedCard })
+      );
     } catch (error) {
-      console.error("Error updating card:", error);
+      console.error("Error dispatching modifyProduct:", error);
     }
   };
 
   const handleDeleteCard = async (id) => {
     try {
-      await new Promise((resolve) => {
-        deleteProduct(id, resolve);
-      });
-      setCards(cards.filter((card) => card.id !== id));
+      dispatch(removeProduct(id));
     } catch (error) {
       console.error("Error deleting card:", error);
     }
@@ -92,22 +79,7 @@ const HomePage = () => {
             </button>
 
             <div className="card-wrapper flex flex-wrap gap-5 sm:gap-[20px] justify-center">
-              {cards.map((card) => (
-                <CardProduct
-                  key={card.id}
-                  title={card.title}
-                  name={card.name}
-                  avatar={card.avatar}
-                  image={card.image}
-                  jobPosition={card.jobPosition}
-                  price={card.price}
-                  workplace={card.workplace}
-                  onEdit={() => handleEdit(card)}
-                  onDelete={() => handleDeleteCard(card.id)}
-                >
-                  {card.description}
-                </CardProduct>
-              ))}
+              <ListView onEdit={handleEdit} onDelete={handleDeleteCard} />
             </div>
           </section>
 

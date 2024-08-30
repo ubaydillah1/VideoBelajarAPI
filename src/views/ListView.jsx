@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../features/productsSlice";
 import CardProduct from "../components/Elements/Card";
-import Loader from "../components/Elements/Loader"; // Pastikan Anda memiliki komponen Loader
+import Loader from "../components/Elements/Loader";
 
 const ListView = ({ onEdit, onDelete }) => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const ListView = ({ onEdit, onDelete }) => {
   }, [productStatus, dispatch]);
 
   if (productStatus === "loading") {
-    return <Loader />; // Menampilkan animasi loading
+    return <Loader />;
   }
 
   if (productStatus === "failed") {
